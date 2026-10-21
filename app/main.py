@@ -7,7 +7,8 @@ def cache(func: Callable) -> Callable:
 
     @wraps(func)
     def wrapper(*args: Any, **kwargs: Any) -> Any:
-        # Since arguments are immutable, args can be used as a cache key directly
+        # Since arguments are immutable, args can 
+        # be used as a cache key directly
         if args in memo:
             print("Getting from cache")
             return memo[args]
